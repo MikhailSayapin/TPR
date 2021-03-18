@@ -15,27 +15,14 @@ bool check(vector<vector<double>>& simplex_table);
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	vector <double> c = { 5, 3, 8 };
-	vector<vector<double>> a = { {2, 1, 0}, {1, 1, 0.5}, {1, 0, 2} };
+	vector <double> c = { 7, 4, 4 };
+	vector<vector<double>> a = { {4, 1, 0}, {1, 2, 0.5}, {1, 0, 3} };
 	vector<vector<double>> simplex_table;
-	vector <double> b = { 3, 6, 3 };
+	vector <double> b = { 3, 3, 5 };
 	vector <int> fict;
 	double F_val = 0;
 	vector<string> symb = { "Si0", "x1", "x2" , "x3" , "x4" , "x5" , "x6", "F" };
 
-	/*cout << "Исходная задача: с: [";
-	for (auto el : c) { cout << el << " "; }
-	cout << "]" << endl << "A: " << endl;
-	for (int i = 0; i < a[0].size(); i++)
-	{
-		cout << "[ ";
-		for (int j = 0; j < a.size(); j++)
-			cout << a[j][i] << " ";
-		cout << "]" << endl;
-	}
-	cout << "b: [";
-	for (auto el : b) { cout << el << " "; }
-	cout << "]" << endl << "=============================================================" << endl;*/
 	for (int i = 0; i < c.size(); i++)
 		a[i].push_back(c[i]);
 	b.push_back(F_val);
